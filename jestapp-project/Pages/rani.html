@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="../Scripts/ajaxCalls.js"></script>
+</head>
+<body onload="f1()">
+    <script>
+  
+        function f1() {
+            ajaxCall('get','../api/Packages','',success,error)
+
+            
+        }
+
+        function success(data) {
+
+            console.log(data)
+        }
+
+        function error(err) {
+
+            console.log(err)
+        }
+    </script>
+    
+    <h1>Maccabi Haifa2</h1>
+</body>
+</html>

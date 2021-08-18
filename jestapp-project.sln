@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1433
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jestapp-project", "jestapp-project\jestapp-project.csproj", "{37C1F8A6-BB57-4431-A859-E595BFCED8F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algo", "..\..\..\..\JestApp - Algo\Algo\Algo.csproj", "{2850DBF2-125D-4C29-8968-597408A3C66E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReserveLocker", "ReserveLocker\ReserveLocker.csproj", "{8ADB2634-D8D5-4311-9255-51D576C08A95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37C1F8A6-BB57-4431-A859-E595BFCED8F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C1F8A6-BB57-4431-A859-E595BFCED8F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C1F8A6-BB57-4431-A859-E595BFCED8F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C1F8A6-BB57-4431-A859-E595BFCED8F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2850DBF2-125D-4C29-8968-597408A3C66E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2850DBF2-125D-4C29-8968-597408A3C66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2850DBF2-125D-4C29-8968-597408A3C66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2850DBF2-125D-4C29-8968-597408A3C66E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ADB2634-D8D5-4311-9255-51D576C08A95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ADB2634-D8D5-4311-9255-51D576C08A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ADB2634-D8D5-4311-9255-51D576C08A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ADB2634-D8D5-4311-9255-51D576C08A95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4DD1D4F-EE9A-450F-AD28-96099ABECE67}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var stationsLocations = [{ StationName: 'תל אביב - סבידור מרכז', Latitude: 32.083790425220684, Longitude: 34.798086815493335},
+            { StationName: 'הרצליה', Latitude: 32.16444687231344, Longitude: 34.81872262898507},
+            { StationName: 'בית יהושע', Latitude: 32.26249821250617, Longitude: 34.86011100199728},
+            { StationName: 'נתניה', Latitude: 32.3201876143966, Longitude: 34.86905654247555},
+            { StationName: 'חדרה - מערב', Latitude: 32.438402722453745, Longitude: 34.899369288501305},
+            { StationName: 'בנימינה', Latitude: 32.514613665465866, Longitude: 34.94979305781466},
+            { StationName: 'קיסריה - פרדס חנה', Latitude: 32.48548608278921, Longitude:34.95418227315789},
+            { StationName: 'עתלית', Latitude: 32.69308162210138, Longitude: 34.940154086647446},
+            { StationName: 'חיפה - בת גלים', Latitude: 32.830687300088606, Longitude: 34.9818987308232},
+            { StationName: 'חוצות המפרץ', Latitude: 32.809698241194255, Longitude:35.05455877486743},
+            { StationName: 'קריית חיים', Latitude: 32.82516942223993, Longitude:35.06428900198772},
+            { StationName: 'קריית מוצקין', Latitude: 32.83343990880056, Longitude: 35.07003087805874},
+            { StationName: 'עכו', Latitude: 32.92735010447325, Longitude: 35.082930459657206},
+            { StationName: 'חיפה - חוף הכרמל', Latitude: 32.79364787902579, Longitude:34.95742954431698},
+            { StationName: 'כפר סבא - נורדאו', Latitude: 32.167559719407734, Longitude: 34.91721453083449},
+            { StationName: 'נהריה', Latitude: 33.00621959064986, Longitude: 35.09885663266974},
+            { StationName: 'ירושלים - גן החיות התנכי', Latitude: 31.74506252838387, Longitude:35.178104830841555},
+            { StationName: 'בית שמש', Latitude: 31.757941387965722, Longitude:34.987920488303466},
+            { StationName: 'קריית גת', Latitude: 31.603698502458975, Longitude: 34.777941453857764},
+            { StationName: 'לוד', Latitude: 31.94673551352545, Longitude: 34.875342479008324},
+            { StationName: 'באר שבע- צפון/אוניברסיטה', Latitude: 31.26229074400483, Longitude: 34.809255815507},
+            { StationName: 'כפר חב"ד', Latitude: 31.993252966165418, Longitude: 34.85298654433053},
+            { StationName: 'תל אביב - השלום', Latitude: 32.07403524882926, Longitude: 34.79297793291281},
+            { StationName: 'חיפה- מרכז השמונה', Latitude: 32.82275227331044, Longitude: 34.99688719643931},
+            { StationName: 'רמלה', Latitude: 31.92899298795141, Longitude: 34.87717245967407},
+            { StationName: 'ראש העין - צפון', Latitude: 32.121093746014196, Longitude: 34.93446673617456},
+            { StationName: 'באר יעקב', Latitude: 31.93295282238968, Longitude: 34.82840735782455},
+            { StationName: 'רחובות', Latitude: 31.909083740602732, Longitude: 34.806030715496206},
+            { StationName: 'יבנה מזרח', Latitude: 31.861980013946983, Longitude: 34.74397057316838},
+            { StationName: 'ראשון לציון - הראשונים', Latitude: 31.949106464625604, Longitude: 34.80258174433113},
+            { StationName: 'אשדוד עד הלום', Latitude: 31.774727453431957, Longitude: 34.664792085360006},
+            { StationName: 'פתח תקווה - סגולה', Latitude: 32.11528492894668, Longitude: 34.90072686966884},
+            { StationName: 'בני ברק', Latitude: 32.10295683145755, Longitude: 34.83023419111227},
+            { StationName: 'תל אביב - אוניברסיטה', Latitude: 32.103790999560054, Longitude: 34.80456545967132},
+            { StationName: 'באר שבע - מרכז', Latitude: 31.24334278196359, Longitude: 34.798416336671536},
+            { StationName: '(מרכזית המפרץ (לב המפרץ', Latitude: 32.793905957668876, Longitude: 35.03717497743074},
+            { StationName: 'תל אביב - ההגנה', Latitude: 32.05422724570069, Longitude: 34.78474510912529},
+            { StationName: 'נמל תעופה בן גוריון', Latitude: 32.000227219227185, Longitude: 34.87051741599826},
+            { StationName: 'ירושלים - מלחה', Latitude: 31.747982845274585, Longitude: 35.18810410200588},
+            { StationName: 'אשקלון', Latitude: 31.67700494434915, Longitude: 34.60514464580801},
+            { StationName: 'דימונה', Latitude: 31.068659263815427, Longitude: 35.01172882880552},
+            { StationName: 'הוד השרון - סוקולוב', Latitude: 32.170705691226026, Longitude: 34.90112940597117},
+            { StationName: 'פתח תקווה  - קריית אריה', Latitude: 32.10632754560425, Longitude: 34.86312200199994},
+            { StationName: 'לוד גני אביב', Latitude: 31.96718422156594, Longitude: 34.87864700200218},
+            { StationName: 'להבים - רהט', Latitude: 31.370023934392027, Longitude: 34.79809110201214},
+            { StationName: 'פאתי מודיעין', Latitude: 31.89377386288032, Longitude:34.96061072741352},
+            { StationName: 'מודיעין - מרכז', Latitude: 31.901250551066934, Longitude: 35.00565037132258},
+            { StationName: 'צומת חולון', Latitude: 32.03731377867177, Longitude: 34.77634202898722},
+            { StationName: 'חולון - וולפסון', Latitude: 32.035688357131605, Longitude:34.7597059001516},
+            { StationName: 'בת ים - יוספטל', Latitude: 32.01539936955556, Longitude: 34.762057885803216},
+            { StationName: 'בת ים - קוממיות', Latitude: 32.001017247729024, Longitude: 34.759276100152114},
+            { StationName: 'ראשון לציון-משה דיין', Latitude: 31.987978976631034, Longitude: 34.75739308850883},
+            { StationName: 'יבנה מערב', Latitude: 31.89136401149274, Longitude: 34.73140766152418},
+            { StationName: 'שדרות', Latitude: 31.51591282641662, Longitude: 34.58710466310651},
+            { StationName: 'נתיבות', Latitude: 31.411325681301328, Longitude: 34.57147613099101},
+            { StationName: 'אופקים', Latitude: 31.321764618920714, Longitude: 34.63293755982382},
+            { StationName: 'נתניה - ספיר', Latitude: 32.279030538355755, Longitude: 34.86519445966828},
+            { StationName: 'יקנעם - כפר יהושע', Latitude: 32.68272954916694, Longitude: 35.123817339317256},
+            { StationName: 'מגדל העמק - כפר ברוך', Latitude: 32.64813854282684, Longitude: 35.20775683191514},
+            { StationName: 'עפולה ר.איתן', Latitude: 32.621902581523685, Longitude:35.2949560363752},
+            { StationName: 'בית שאן', Latitude: 32.51485768026251, Longitude:35.488069275553535},
+            { StationName: 'אחיהוד', Latitude: 32.911807147821655, Longitude: 35.17412164616449},
+            { StationName: 'כרמיאל', Latitude: 32.92407356572357, Longitude: 35.29954360180177},
+            { StationName: 'רעננה מערב', Latitude: 32.180357421856556, Longitude: 34.85070724220458},
+            { StationName: 'רעננה דרום', Latitude: 32.17270218380505, Longitude: 34.88634057051079},
+            { StationName: 'קרית מלאכי - יואב', Latitude: 31.745911339415613, Longitude:34.8222757265117},
+            { StationName: 'ירושלים - יצחק נבון', Latitude: 31.78834931069337, Longitude:35.20259605967646},
+        ];
+            var stations = ['תל אביב - סבידור מרכז',
+                'הרצליה',
+                'בית יהושע',
+                'נתניה',
+                'חדרה - מערב',
+                'בנימינה',
+                'קיסריה - פרדס חנה',
+                'עתלית',
+                'חיפה - בת גלים',
+                'חוצות המפרץ',
+                'קריית חיים',
+                'קריית מוצקין',
+                'עכו',
+                'חיפה - חוף הכרמל',
+                'כפר סבא - נורדאו',
+                'נהריה',
+                'ירושלים - גן החיות התנכי',
+                'בית שמש',
+                'קריית גת',
+                'לוד',
+                'באר שבע- צפון/אוניברסיטה',
+                'כפר חב"ד',
+                'תל אביב - השלום',
+                'חיפה- מרכז השמונה',
+                'רמלה',
+                'ראש העין - צפון',
+                'באר יעקב',
+                'רחובות',
+                'יבנה מזרח',
+                'ראשון לציון - הראשונים',
+                'אשדוד עד הלום',
+                'פתח תקווה - סגולה',
+                'בני ברק',
+                'תל אביב - אוניברסיטה',
+                'באר שבע - מרכז',
+                '(מרכזית המפרץ (לב המפרץ',
+                'תל אביב - ההגנה',
+                'נמל תעופה בן גוריון',
+                'ירושלים - מלחה',
+                'אשקלון',
+                'דימונה',
+                'הוד השרון - סוקולוב',
+                'פתח תקווה  - קריית אריה',
+                'לוד גני אביב',
+                'להבים - רהט',
+                'פאתי מודיעין',
+                'מודיעין - מרכז',
+                'צומת חולון',
+                'חולון - וולפסון',
+                'בת ים - יוספטל',
+                'בת ים - קוממיות',
+                'ראשון לציון-משה דיין',
+                'יבנה מערב',
+                'שדרות',
+                'נתיבות',
+                'אופקים',
+                'נתניה - ספיר',
+                'יקנעם - כפר יהושע',
+                'מגדל העמק - כפר ברוך',
+                'עפולה ר.איתן',
+                'בית שאן',
+                'אחיהוד',
+                'כרמיאל',
+                'רעננה מערב',
+                'רעננה דרום',
+                'קרית מלאכי - יואב',
+                'ירושלים - יצחק נבון',
+            ];
+        var str = "";
+        var str1 = "";
+
+            function stationStr() {
+                for (var i = 0; i < stations.length; i++) {
+                    str += `INSERT INTO Stations2(StationName)
+                        VALUES('`+ stations[i] + `');<br/>`;
+                    
+                }
+                console.log("ok");
+                document.getElementById("script").innerHTML = str;
+            };
+
+        function stationListSTR() {
+            for (var i = 0; i < stationsLocations.length; i++) {
+                str1 += ` UPDATE Stations SET Latitude= `+ stationsLocations[i].Latitude+`, Longitude = `+ stationsLocations[i].Longitude+ ` Where StationID=`+(i+2)+`;<br/>`
+           
+            }
+            console.log(str1);
+            document.getElementById("script").innerHTML = str1
+        }
+        
+
+      
+
+    </script>
+</head>
+<body>
+    <div><div id="script" style="text-align:left"><button onclick="stationStr()">click for list</button><button onclick="stationListSTR()">click for list with locations</button></div></div>
+</body>
+</html>
